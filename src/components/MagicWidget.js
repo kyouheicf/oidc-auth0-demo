@@ -29,7 +29,7 @@ const MagicWidget = ({ jwt }) => {
       jwt: jwt,
       providerId: process.env.REACT_APP_MAGIC_PROVIDER_ID,
     });
-    console.log(DID)
+    console.log(atob(DID))
     const data = await magic.user.getMetadata();
     console.log(data)
     setAddress(data.publicAddress);
